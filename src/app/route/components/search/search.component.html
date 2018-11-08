@@ -1,0 +1,24 @@
+<h3>
+    Rechercher un trajet
+</h3>
+
+<form (ngSubmit)="onSubmit(f)" #f="ngForm">
+
+    <label for="start">
+        Station de Départ
+    </label>
+    <input type="text" name="start" [(ngModel)]="start" required />
+
+    <div (click)="onLocateStation()">
+        Station la plus proche
+    </div>
+
+    <label for="end">
+        Station d'arrivée
+    </label>
+    <input type="text" name="end" [(ngModel)]="end" required />
+
+    <button type="submit" [disabled]="f.invalid">
+        Lancer la recherche
+    </button>
+</form>

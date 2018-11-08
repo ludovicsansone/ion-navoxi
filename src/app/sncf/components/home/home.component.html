@@ -1,0 +1,30 @@
+<div id="view-pannel">
+
+    <div id="view-container">
+
+        <h2 class="view-title">
+            {{ station }}
+        </h2>
+
+        <table id="train-list" cellpadding="0" cellspacing="0" border="0">
+            <tr id="train" *ngFor="let r of panel" (click)="onStart(r.destination, r.quai)">
+                <td class="train-type">
+                    T{{r.typeTrain}}</td>
+                    <td class="train-hour">
+                        {{ r.heure }}
+                    </td>
+                    <td class="train-destination">
+                        <span>
+                            {{ r.destination }}
+                        </span>
+                    </td>
+                    <td class="train-platform">
+                        <span>
+                            {{ r.quai }}
+                        </span>
+                    </td>
+                    <br/>
+                </tr>
+            </table>
+        </div>
+    </div>

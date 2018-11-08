@@ -1,0 +1,13 @@
+<h3>
+     {{ routes[0].start }} -> {{ routes[0].end }} ({{ routes.length }} trajets possibles)
+</h3>
+
+<ul>
+    <li *ngFor="let r of routes" (click)="onSelectRoute(r.id)">
+        En {{ r.time }}, et {{ r.step_number }} correspondence.
+    </li>
+</ul>
+
+<div routerLink="/route-search">
+    Page précédente
+</div>
