@@ -2,6 +2,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
+import { IonicModule } from '@ionic/angular';
 import { RouteModule } from '../route/route.module';
 import { MainRoutingModule } from './main-routing.module';
 import { SettingsModule } from '../settings/settings.module';
@@ -18,6 +19,7 @@ import { FootComponent } from './components/foot/foot.component';
   imports: [
     CommonModule,
     HttpClientModule,
+    IonicModule,
     MainRoutingModule,
     RouteModule,
     SettingsModule,

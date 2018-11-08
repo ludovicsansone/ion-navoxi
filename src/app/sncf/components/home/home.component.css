@@ -21,67 +21,72 @@
 	width: 100%;
 	margin-left: auto;
 	margin-right: auto;
-	border: 10px solid transparent;
 	font-family: 'Avenir';
 }
 
-#train:nth-child(odd)
-{
-    background-color: #00c2ec;
-}
-
-#train:nth-child(even)
-{
-    background-color: #0082c8;
-}
-
-#train
+#train-list .train
 {
 	color: white;
-	font-size: 120%;
-	padding: 40px;
-	height: 100px;
+	font-size: 100%;
+	height: 18%;
 }
 
-#train:hover
+/*#train-list .train span {
+	padding-left: 3%;
+	padding-right: 3%;
+}*/
+
+#train-list .train:hover
 {
 	cursor: pointer;
 }
 
-#train .train-type,
+#train-list .train:nth-child(odd)
+{
+    background-color: #00c2ec;
+}
+
+#train-list .train:nth-child(even)
+{
+    background-color: #0082c8;
+}
+
+/*
+
+#train-list .train .train-type,
 {
 	text-align: center;
 }
 
-#train .train-destination 
+#train-list .train .train-destination 
 {
 	text-align: left;
 	vertical-align: top;
 	font-size: 120%;
 }
 
-#train .train-platform {
+#train-list .train .train-platform {
 	text-align: center;
 }
 
-#train .train-hour {
+#train-list .train .train-hour {
 	font-weight: bold;
 	color: yellow;
 	padding: 2px;
 	text-align: left;
 }
 
-#train:nth-child(odd) .train-platform span {
+#train-list .train:nth-child(odd) .train-platform span {
 	color: #00C2EC;
 	background-color: white;
 	padding: 2px;
 }
 
-#train:nth-child(even) .train-platform span {
+#train-list .train:nth-child(even) .train-platform span {
 	color: #0082c8;
 	background-color: white;
 	padding: 2px;
-}
+}*/
 
 
 

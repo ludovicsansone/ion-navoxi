@@ -1,5 +1,7 @@
 {
   "name": "sncf",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

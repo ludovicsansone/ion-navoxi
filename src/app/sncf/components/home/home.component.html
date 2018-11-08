@@ -1,26 +1,48 @@
-<ion-view id="view-pannel">
-
+<div id="view-pannel">
     <div id="view-container">
         <h2 class="view-title">
             {{ station }}
         </h2>
 
-        <ion-list class="train-list">
-            <ion-item class="train" *ngFor="let r of panel" (click)="onStart(r.destination, r.quai)">
-                <span class="train-type">
-                    T{{r.typeTrain}}
+        <ion-grid id="train-list">
+            <ion-row class="train" *ngFor="let r of panel" (click)="onStart(r.destination, r.quai)">
+                <ion-col col-2>
+                    <span class="train-type">
+                        {{r.typeTrain}}
+                    </span>
+                </ion-col>
+                <ion-col col-2>
+                    <span class="train-hour">
+                        {{ r.heure }}
+                    </span>
+                </ion-col>
+                <ion-col col-6>
+                    <span class="train-destination">
+                        {{ r.destination }}
+                    </span>
+                </ion-col>
+                <ion-col col-2>
+                    <span class="train-platform">
+                        {{ r.quai }}
+                    </span>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+        <!--div id="train-list">
+            <div class="train" *ngFor="let r of panel" (click)="onStart(r.destination, r.quai)">
+                <span class="train-type col-2">
+                {{r.typeTrain}}
                 </span>
-                <span class="train-hour">
+                <span class="train-hour col-2">
                     {{ r.heure }}
                 </span>
-                <span class="train-destination">
+                <span class="train-destination col-6">
                     {{ r.destination }}
                 </span>
-                <span class="train-platform">
+                <span class="train-platform col-2">
                     {{ r.quai }}
                 </span>
-                <br/>
-            </ion-item>
-        </ion-list>
+            </div>
+        </div-->
     </div>
-</ion-view>
+</div>
