@@ -1,0 +1,27 @@
+<!-- A designer comme un bouton retour -->
+<button (click)="onReturn()">
+    Retour au panneau de gare
+</button>
+
+<h2 id="view-title">
+    Guidage vers le train pour {{ destination }}, sur la voie {{ quai }}
+</h2>
+
+<div id="view-pannel">
+    <p id="instruction">
+        {{ step.instruction }}
+    </p>
+
+    <button id="repeat-button" (click)="onRepeat()">
+        Répéter la dernière instruction
+    </button>
+
+    <p id="current-position">
+        Position actuelle : {{ step.position }}
+    </p>
+
+    <button id="next-step-button" (click)="onNextStep()">
+        Marcher vers la balise suivante
+    </button>
+
+</div>

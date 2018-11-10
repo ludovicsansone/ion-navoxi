@@ -1,7 +1,7 @@
 {
-  "name": "sncf",
+  "name": "Navoxi",
   "integrations": {
     "cordova": {}
   },
-  "type": "angular"
+  "type": "ionic-angular"
 }
