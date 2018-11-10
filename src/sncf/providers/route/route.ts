@@ -10,6 +10,7 @@ import { Injectable } from '@angular/core';
 export class RouteProvider {
     public destination: string;
     public quai: string;
+    public heure: string;
     public route: any;
     public routes = [
     {place: 'A', steps: [

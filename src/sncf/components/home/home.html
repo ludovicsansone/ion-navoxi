@@ -1,12 +1,11 @@
-<ion-content padding>
-    <div id="view-container">
-        <h2 class="view-title">
-             {{ station }}
-        </h2>
+<div id="view-container">
+    <h2 class="view-title">
+         {{ station }}
+    </h2>
 
-        <ion-grid id="train-list">
+    <ion-grid id="train-list">
+        <span>
             <ion-row class="train" *ngFor="let r of panel" (click)="onStart(r.destination, r.quai)">
-            <span>
                 <ion-col col-2>
                     <span class="train-type">
                         {{r.typeTrain}}
@@ -24,27 +23,10 @@
                 </ion-col>
                 <ion-col col-2>
                     <span class="train-platform">
-                        Voie {{ r.quai }}
+                        {{ r.quai }}
                     </span>
                 </ion-col>
-            </span>
             </ion-row>
-        </ion-grid>
-        <!--div id="train-list">
-            <div class="train" *ngFor="let r of panel" (click)="onStart(r.destination, r.quai)">
-                <span class="train-type col-2">
-                {{r.typeTrain}}
-                </span>
-                <span class="train-hour col-2">
-                    {{ r.heure }}
-                </span>
-                <span class="train-destination col-6">
-                    {{ r.destination }}
-                </span>
-                <span class="train-platform col-2">
-                    {{ r.quai }}
-                </span>
-            </div>
-        </div-->
-    </div>
-</ion-content>
+        </span>
+    </ion-grid>
+</div>

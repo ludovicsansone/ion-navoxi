@@ -43,7 +43,7 @@ export class RouteComponent {
       if (this.routeIndex < maxIndex) {
           this.routeIndex += 1;
           this.step = this.routeProvider.getStep(this.routeIndex);
-       this.ttsProvider.sayMessage(this.step.instruction);
+          this.ttsProvider.sayMessage(this.step.instruction);
       }
       else
           this.ttsProvider.sayMessage("Vous êtes arrivé");

@@ -10,6 +10,8 @@ page-home {
 {
     color: white;
     vertical-align: top;
+    text-align : center;
+    font-family: 'Avenir';
 }
 
 #view-container {
@@ -34,11 +36,6 @@ page-home {
 	height: 18%;
 }
 
-/*#train-list .train span {
-	padding-left: 3%;
-	padding-right: 3%;
-}*/
-
 #train-list .train:hover
 {
 	cursor: pointer;
@@ -54,7 +51,7 @@ page-home {
     background-color: #0082c8;
 }
 
-/*
+
 
 #train-list .train .train-type,
 {
@@ -65,15 +62,20 @@ page-home {
 {
 	text-align: left;
 	vertical-align: top;
-	font-size: 120%;
+	font-size: 100%;
+	white-space: nowrap;
 }
 
 #train-list .train .train-platform {
-	text-align: center;
+	float: right;
+	margin-right: 0.5em;
+	border: 1px solid white;
+	padding: 0.3em;
 }
 
 #train-list .train .train-hour {
 	font-weight: bold;
+	font-size: 80%;
 	color: yellow;
 	padding: 2px;
 	text-align: left;
@@ -89,4 +91,4 @@ page-home {
 	color: #0082c8;
 	background-color: white;
 	padding: 2px;
-}*/
+}

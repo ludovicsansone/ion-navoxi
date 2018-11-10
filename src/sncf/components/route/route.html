@@ -1,27 +1,67 @@
 <!-- A designer comme un bouton retour -->
-<button (click)="onReturn()">
-    Retour au panneau de gare
-</button>
+<div class="route-container">
+    <ion-grid>
+        <ion-row class="route-section-back">
+            <ion-col col-2>
+                <button ion-button icon-back (click)="onReturn()" aria-label="Retour au panneau de gare">
+                    <ion-icon name="arrow-back"></ion-icon>
+                </button>
+            </ion-col>
+            <ion-col class="route-title" col-10>
+                <ion-title>Guidage</ion-title>
+            </ion-col>
+        </ion-row>
 
-<h2 id="view-title">
-    Guidage vers le train pour {{ destination }}, sur la voie {{ quai }}
-</h2>
+        <ion-row class="route-train">
+            <ion-col col-2>
+                <span class="train-hour">
+                    10h10
+                </span>
+            </ion-col>
+            <ion-col col-8>
+                <span class="route-train-destination">
+                    {{destination}}
+                </span>
+            </ion-col>
+            <ion-col col-2>
+                <span class="route-train-platform">
+                    {{quai}}
+                </span>
+            </ion-col>
+        </ion-row>
 
-<div id="view-pannel">
-    <p id="instruction">
-        {{ step.instruction }}
-    </p>
+        <ion-row>
+            <ion-col col-12>
+                <p class="route-instruction">
+                    {{ step.instruction}}
+                </p>
+            </ion-col>
+        </ion-row>
 
-    <button id="repeat-button" (click)="onRepeat()">
-        Répéter la dernière instruction
-    </button>
+        <ion-row>
+            <ion-col col-4>
+                <span class="route-current-position-label">
+                    Position actuelle : 
+                </span>
+            </ion-col>
+            <ion-col col-8>
+                <span class="route-current-position">
+                    {{ step.position }}
+                </span>
+            </ion-col>
+        </ion-row>
 
-    <p id="current-position">
-        Position actuelle : {{ step.position }}
-    </p>
-
-    <button id="next-step-button" (click)="onNextStep()">
-        Marcher vers la balise suivante
-    </button>
-
+        <ion-row class="route-buttons">
+            <ion-col col-6>
+                <button ion-button class="route-repeat-instruction" (click)="onRepeat()">
+                    <span>Répéter la dernière instruction</span>
+                </button>
+            </ion-col>
+            <ion-col col-6>
+                <button ion-button class="route-next-step" color="secondary" (click)="onNextStep()">
+                    <span>Marcher vers la balise suivante</span>
+                </button> 
+            </ion-col>
+        </ion-row>
+    </ion-grid>
 </div>
