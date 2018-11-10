@@ -93,15 +93,3 @@ page-home {
 	padding: 2px;
 	text-align: left;
 }
-
-#train-list .train:nth-child(odd) .train-platform span {
-	color: #00C2EC;
-	background-color: white;
-	padding: 2px;
-}
-
-#train-list .train:nth-child(even) .train-platform span {
-	color: #0082c8;
-	background-color: white;
-	padding: 2px;
-}

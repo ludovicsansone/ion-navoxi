@@ -55,7 +55,7 @@
 }
 
 #app-view .route-instruction {
-	font-size: 200%;
+	font-size: 150%;
 	margin-left: 1em;
 	margin-right: 1em;
 	margin-top: 3em;
@@ -81,12 +81,7 @@
 	height: 8em;
 	margin-left: auto;
 	margin-right: auto;
-}
-
-#app-view .route-buttons
-{
-	position: fixed;
-    bottom: 0;
+	background-color: #eaeaea;
 }
 
 #app-view .route-repeat-instruction

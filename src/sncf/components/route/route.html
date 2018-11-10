@@ -58,14 +58,14 @@
                 </button>
             </ion-col>
             <ion-col col-6>
-                <button ion-button class="route-next-step" color="secondary" (click)="onNextStep()">
+                <button ion-button class="route-next-step" color="secondary" (click)="onNextStep()" [disabled]="!enableNextStep">
                     <span>Marcher vers la balise suivante</span>
                 </button> 
             </ion-col>
         </ion-row>
 
         <ion-row class="route-img-beacon">
-            <img src="assets/imgs/beacon.png" />
+            <img [src]="imgSrc" />
         </ion-row>
     </ion-grid>
 </div>
