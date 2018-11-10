@@ -29,11 +29,22 @@ page-home {
 	font-family: 'Avenir';
 }
 
+#train-list th
+{
+	font-size: 70%;
+	color: white;
+	text-align: left;
+}
+
+#train-list th.train-platform {
+	padding-right: 1em;
+}
+
 #train-list .train
 {
 	color: white;
 	font-size: 100%;
-	height: 18%;
+	height: 3em;
 }
 
 #train-list .train:hover
@@ -62,15 +73,17 @@ page-home {
 {
 	text-align: left;
 	vertical-align: top;
-	font-size: 100%;
+	font-size: 120%;
 	white-space: nowrap;
 }
 
 #train-list .train .train-platform {
-	float: right;
 	margin-right: 0.5em;
+	margin-top: 0.5em;
 	border: 1px solid white;
 	padding: 0.3em;
+	position: fixed;
+	right: 2em;
 }
 
 #train-list .train .train-hour {
