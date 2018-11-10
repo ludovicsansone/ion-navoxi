@@ -14,10 +14,10 @@ import { NavController } from 'ionic-angular';
   templateUrl: 'route.html'
 })
 export class RouteComponent {
-    private destination: string;
-    private quai: string;
-    private route: any;
-    private step: any;
+    private destination: string = "";
+    private quai: string = "";
+    private route: any = {};
+    private step: any = {};
     private routeIndex: number = -1;
 
   constructor(
@@ -41,14 +41,16 @@ export class RouteComponent {
       let maxIndex = this.route.steps.length - 1;
 
       if (this.routeIndex < maxIndex) {
+          setTimeout(() => {
           this.routeIndex += 1;
           this.step = this.routeProvider.getStep(this.routeIndex);
           this.ttsProvider.sayMessage(this.step.instruction);
+          }, 5000);
       }
       else
           this.ttsProvider.sayMessage("Vous êtes arrivé");
   }
-  
+
   onReturn() {
       this.nav.pop();
   }
