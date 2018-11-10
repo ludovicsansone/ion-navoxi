@@ -19,6 +19,7 @@ export class RouteComponent {
     private route: any = {};
     private step: any = {};
     private routeIndex: number = -1;
+    private imgSrc : string = 'assets/imgs/beacon.png';
 
   constructor(
   public nav: NavController,
@@ -40,15 +41,20 @@ export class RouteComponent {
   onNextStep() {
       let maxIndex = this.route.steps.length - 1;
 
+      this.imgSrc = 'assets/imgs/shoes.gif';
+
       if (this.routeIndex < maxIndex) {
           setTimeout(() => {
-          this.routeIndex += 1;
-          this.step = this.routeProvider.getStep(this.routeIndex);
-          this.ttsProvider.sayMessage(this.step.instruction);
+            this.imgSrc = 'assets/imgs/beacon.png';
+            this.routeIndex += 1;
+            this.step = this.routeProvider.getStep(this.routeIndex);
+            this.ttsProvider.sayMessage(this.step.instruction);
           }, 5000);
       }
-      else
-          this.ttsProvider.sayMessage("Vous êtes arrivé");
+      else {
+        this.ttsProvider.sayMessage("Vous êtes arrivé");
+        this.imgSrc = 'assets/imgs/beacon.png';
+      }
   }
 
   onReturn() {
