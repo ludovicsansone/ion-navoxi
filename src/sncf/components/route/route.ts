@@ -21,6 +21,10 @@ export class RouteComponent {
     private routeIndex: number = -1;
     private imgSrc : string = 'assets/imgs/beacon.png';
     private enableNextStep = true;
+    private walking = new Audio("assets/audio/walking.mp3");
+
+
+
 
   constructor(
   public nav: NavController,
@@ -41,21 +45,22 @@ export class RouteComponent {
 
   onNextStep() {
       let maxIndex = this.route.steps.length - 1;
-
       this.imgSrc = 'assets/imgs/shoes.gif';
       this.enableNextStep = false;
 
       if (this.routeIndex < maxIndex) {
+if (this.routeIndex > -1)
+          this.walking.play();
           setTimeout(() => {
             this.imgSrc = 'assets/imgs/beacon.png';
             this.routeIndex += 1;
             this.step = this.routeProvider.getStep(this.routeIndex);
             this.ttsProvider.sayMessage(this.step.instruction);
             this.enableNextStep = true;
-          }, 5000);
+          }, 6000);
       }
       else {
-        this.ttsProvider.sayMessage("Vous êtes arrivé");
+        this.ttsProvider.sayMessage("Vous êtes déjà arrivé");
         this.imgSrc = 'assets/imgs/beacon.png';
         this.enableNextStep = false;
       }
