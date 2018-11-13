@@ -22,6 +22,7 @@ export class RouteComponent {
     private imgSrc : string = 'assets/imgs/beacon.png';
     private enableNextStep = true;
     private walking = new Audio("assets/audio/walking.mp3");
+    private stop = new Audio("assets/audio/stop.mp3");
 
     constructor(
     public nav: NavController,
@@ -61,9 +62,12 @@ export class RouteComponent {
             }, timeout);
         }
         else {
-            this.ttsProvider.sayMessage("Vous êtes déjà arrivé");
+this.stop.play();
             this.imgSrc = 'assets/imgs/beacon.png';
             this.enableNextStep = false;
+            setTimeout(() => {
+                this.ttsProvider.sayMessage("Vous êtes déjà arrivé");
+            }, 1000);
         }
     }
 
