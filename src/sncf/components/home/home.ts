@@ -17,13 +17,14 @@ import { RouteProvider } from '../../providers/route/route';
 export class HomeComponent {
     panel: Array<any>;
     station: string = "Lyon Perrache";
-    //private ariaLabelPlatform: string = "Voie";
 
   constructor(
   public navCtrl: NavController,
-  private routeProvider: RouteProvider) { }
+  private routeProvider: RouteProvider) {
+  }
 
   ngOnInit() {
+
       this.panel = [
       {typeTrain: 'TER', destination: 'Valence Ville', numero: '886712', heure: '10h42', quai: 'A'},
       {typeTrain: 'TER', destination: 'Clermont-Ferrand', numero: '874442', heure: '10h54', quai: 'B'},
