@@ -1,11 +1,5 @@
 import { Injectable } from '@angular/core';
 
-/*
-  Generated class for the RouteProvider provider.
-
-  See https://angular.io/guide/dependency-injection for more info on providers
-  and Angular DI.
-*/
 @Injectable()
 export class RouteProvider {
     public destination: string;
@@ -74,7 +68,7 @@ export class RouteProvider {
   getRoute(place: string) {
       this.route = this.routes.find((route: any) => {
           if (route.place == place)
-          return (route);
+              return (route);
       });
       return this.route;
   }

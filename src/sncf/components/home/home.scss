@@ -1,10 +1,3 @@
-page-home {
-}
-
-#view-pannel
-{
-    
-}
 
 #view-container .view-title
 {
@@ -15,41 +8,43 @@ page-home {
 }
 
 #view-container {
-	background-color: #333333;
-	padding-left: 5%;	
-	padding-right: 5%;
-	padding-bottom: 10%;
-	padding-top: 10%;
+    background-color: #333333;
+    padding-left: 5%;	
+    padding-right: 5%;
+    padding-bottom: 10%;
+    padding-top: 10%;
 }
 
-#train-list {
-	width: 100%;
-	margin-left: auto;
-	margin-right: auto;
-	font-family: 'Avenir';
+#train-list
+{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Avenir';
 }
 
 #train-list th
 {
-	font-size: 70%;
-	color: white;
-	text-align: left;
+    font-size: 70%;
+    color: white;
+    text-align: left;
 }
 
-#train-list th.train-platform {
-	padding-right: 1em;
+#train-list th.train-platform
+{
+    padding-right: 1em;
 }
 
 #train-list .train
 {
-	color: white;
-	font-size: 100%;
-	height: 3em;
+    color: white;
+    font-size: 100%;
+    height: 3em;
 }
 
 #train-list .train:hover
 {
-	cursor: pointer;
+    cursor: pointer;
 }
 
 #train-list .train:nth-child(odd)
@@ -62,34 +57,34 @@ page-home {
     background-color: #0082c8;
 }
 
-
-
 #train-list .train .train-type,
 {
-	text-align: center;
+    text-align: center;
 }
 
 #train-list .train .train-destination 
 {
-	text-align: left;
-	vertical-align: top;
-	font-size: 120%;
-	white-space: nowrap;
+    text-align: left;
+    vertical-align: top;
+    font-size: 120%;
+    white-space: nowrap;
 }
 
-#train-list .train .train-platform {
-	margin-right: 0.5em;
-	margin-top: 0.5em;
-	border: 1px solid white;
-	padding: 0.3em;
-	position: fixed;
-	right: 2em;
+#train-list .train .train-platform
+{
+    margin-right: 0.5em;
+    margin-top: 0.5em;
+    border: 1px solid white;
+    padding: 0.3em;
+    position: fixed;
+    right: 2em;
 }
 
-#train-list .train .train-hour {
-	font-weight: bold;
-	font-size: 80%;
-	color: yellow;
-	padding: 2px;
-	text-align: left;
+#train-list .train .train-hour
+{
+    font-weight: bold;
+    font-size: 80%;
+    color: yellow;
+    padding: 2px;
+    text-align: left;
 }

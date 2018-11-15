@@ -1,5 +1,7 @@
 <div class="route-container">
+
     <ion-grid>
+
         <ion-row class="route-section-back">
             <ion-col col-2>
                 <button ion-button icon-back (click)="onReturn()" aria-label="Retour au panneau de gare">
@@ -7,7 +9,9 @@
                 </button>
             </ion-col>
             <ion-col class="route-title" col-10>
-                <ion-title>Guidage</ion-title>
+                <ion-title>
+                    Guidage
+                </ion-title>
             </ion-col>
         </ion-row>
 
@@ -32,7 +36,7 @@
         <ion-row>
             <ion-col col-12>
                 <p class="route-instruction">
-                    {{ step.instruction}}
+                    {{ step.instruction }}
                 </p>
             </ion-col>
         </ion-row>
@@ -53,12 +57,16 @@
         <ion-row class="route-buttons">
             <ion-col col-6>
                 <button ion-button class="route-repeat-instruction" (click)="onRepeat()">
-                    <span>Répéter la dernière instruction</span>
+                    <span>
+                        Répéter la dernière instruction
+                    </span>
                 </button>
             </ion-col>
             <ion-col col-6>
                 <button ion-button class="route-next-step" color="secondary" (click)="onNextStep()" [disabled]="!enableNextStep">
-                    <span>Marcher vers la balise suivante</span>
+                    <span>
+                        Marcher vers la balise suivante
+                    </span>
                 </button> 
             </ion-col>
         </ion-row>

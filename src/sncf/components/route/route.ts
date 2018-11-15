@@ -3,12 +3,6 @@ import { RouteProvider } from '../../providers/route/route';
 import { TtsProvider } from '../../../providers/tts/tts';
 import { NavController } from 'ionic-angular';
 
-/**
-* Generated class for the RouteComponent component.
-*
-* See https://angular.io/api/core/Component for more info on Angular
-* Components.
-*/
 @Component({
     selector: 'route',
     templateUrl: 'route.html'
@@ -51,7 +45,6 @@ export class RouteComponent {
         this.imgSrc = 'assets/imgs/shoes.gif';
         this.imgAlt = "Image animée d'une paire de chaussure en train de marcher";
         this.enableNextStep = false;
-
         if (this.routeIndex < maxIndex) {
             if (this.routeIndex > -1) {
                 this.walking.play();
@@ -80,5 +73,4 @@ export class RouteComponent {
     onReturn() {
         this.nav.pop();
     }
-
 }

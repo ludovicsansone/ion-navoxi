@@ -1,29 +1,23 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { RouteComponent } from '../route/route';
-
 import { RouteProvider } from '../../providers/route/route';
 
-/**
-* Generated class for the HomeComponent component.
-*
-* See https://angular.io/api/core/Component for more info on Angular
-* Components.
-*/
 @Component({
     selector: 'home',
     templateUrl: 'home.html'
 })
 export class HomeComponent {
-    panel: Array<any>;
-    station: string = "Lyon Perrache";
+    private panel: Array<any>;
+        private station: string = "";
 
-    constructor(
+        constructor(
         public navCtrl: NavController,
         private routeProvider: RouteProvider) {
         }
 
         ngOnInit() {
+            this.station = "Lyon Perrache";
             this.panel = [
             {typeTrain: 'TER', destination: 'Valence Ville', numero: '886712', heure: '10h42', quai: 'A'},
             {typeTrain: 'TER', destination: 'Clermont-Ferrand', numero: '874442', heure: '10h54', quai: 'B'},
@@ -39,7 +33,6 @@ export class HomeComponent {
             this.routeProvider.destination = destination;
             this.routeProvider.quai = quai;
             this.routeProvider.heure = heure;
-
             this.navCtrl.push(RouteComponent);
         }
-}
+    }
