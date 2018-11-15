@@ -1,4 +1,3 @@
-<!-- A designer comme un bouton retour -->
 <div class="route-container">
     <ion-grid>
         <ion-row class="route-section-back">
@@ -15,12 +14,12 @@
         <ion-row class="route-train">
             <ion-col col-2>
                 <span class="train-hour">
-                    10h10
+                    {{ heure }}
                 </span>
             </ion-col>
             <ion-col col-8>
                 <span class="route-train-destination">
-                    {{destination}}
+                    {{ destination }}
                 </span>
             </ion-col>
             <ion-col col-2>
@@ -65,7 +64,7 @@
         </ion-row>
 
         <ion-row class="route-img-beacon">
-            <img [src]="imgSrc" />
+            <img [src]="imgSrc" [alt]="imgAlt"/>
         </ion-row>
     </ion-grid>
 </div>

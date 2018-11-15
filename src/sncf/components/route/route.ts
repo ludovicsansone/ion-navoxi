@@ -16,10 +16,12 @@ import { NavController } from 'ionic-angular';
 export class RouteComponent {
     private destination: string = "";
     private quai: string = "";
+    private heure: string = "";
     private route: any = {};
     private step: any = {};
     private routeIndex: number = -1;
     private imgSrc : string = 'assets/imgs/beacon.png';
+    private imgAlt: string = "Image d'une balise émettant des ondes";
     private enableNextStep = true;
     private walking = new Audio("assets/audio/walking.mp3");
     private stop = new Audio("assets/audio/stop.mp3");
@@ -32,6 +34,7 @@ export class RouteComponent {
     ngOnInit() {
         this.destination = this.routeProvider.destination;
         this.quai = this.routeProvider.quai;
+        this.heure = this.routeProvider.heure;
         this.ttsProvider.sayMessage("Je vous emmène jusqu'au quai " + this.quai + ", pour prendre le train en direction de " + this.destination);
         this.route = this.routeProvider.getRoute(this.quai);
         this.onNextStep();
@@ -46,6 +49,7 @@ export class RouteComponent {
         let timeout = 0;
 
         this.imgSrc = 'assets/imgs/shoes.gif';
+        this.imgAlt = "Image animée d'une paire de chaussure en train de marcher";
         this.enableNextStep = false;
 
         if (this.routeIndex < maxIndex) {
@@ -55,6 +59,7 @@ export class RouteComponent {
             }
             setTimeout(() => {
                 this.imgSrc = 'assets/imgs/beacon.png';
+                this.imgAlt = "Image d'une balise émettant des ondes";
                 this.routeIndex += 1;
                 this.step = this.routeProvider.getStep(this.routeIndex);
                 this.ttsProvider.sayMessage(this.step.instruction);
@@ -62,8 +67,9 @@ export class RouteComponent {
             }, timeout);
         }
         else {
-this.stop.play();
+            this.stop.play();
             this.imgSrc = 'assets/imgs/beacon.png';
+            this.imgAlt = "Image d'une balise émettant des ondes";
             this.enableNextStep = false;
             setTimeout(() => {
                 this.ttsProvider.sayMessage("Vous êtes déjà arrivé");
