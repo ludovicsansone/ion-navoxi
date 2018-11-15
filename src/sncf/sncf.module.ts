@@ -5,6 +5,7 @@ import { IonicModule } from 'ionic-angular';
 // Components
 import { RouteComponent } from './components/route/route';
 import { HomeComponent }  from './components/home/home';
+import { StoryComponent } from './components/story/story';
 
 // Providers
 import { RouteProvider } from './providers/route/route';
@@ -13,18 +14,21 @@ import { TtsProvider } from '../providers/tts/tts';
 @NgModule({
     declarations: [
         RouteComponent,
-        HomeComponent
+        HomeComponent,
+        StoryComponent
     ],
     imports: [
         IonicModule
     ],
     entryComponents: [
         RouteComponent,
-        HomeComponent
+        HomeComponent,
+        StoryComponent
     ],
     exports: [
         RouteComponent,
-        HomeComponent
+        HomeComponent,
+        StoryComponent
     ],
     providers: [
         RouteProvider,
